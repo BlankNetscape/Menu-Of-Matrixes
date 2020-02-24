@@ -1,7 +1,6 @@
 import sys, os, curses, numpy as np
 ## My ######################
 import cursedUI as cUI
-import myMenu
 import matrixCalc as mtrxC
 ############################
 menu_all = []
