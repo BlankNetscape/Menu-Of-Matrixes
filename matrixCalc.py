@@ -2,6 +2,7 @@
 # pip install colorama
 # pip install getch
 import numpy as np
+import os
 # import time
 # from colorama import init
 # ^ MODULES
@@ -25,9 +26,11 @@ def toMatrix( R, C, string ):
 
 def scanSlots():
     # Scan 10 slot files
+    script_dir = os.path.dirname(__file__)
+    rel_path = "saves/save"
     for i in range(10):
     # Read lines from each file 
-        f = open('saves/save-{:02}'.format(i))
+        f = open('{path}-{num:02}'.format(path = os.path.join(script_dir, rel_path), num = i))
         lines = f.readlines()
         f.close()
     # If lines Empty >> fill:
